@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/kaggle/working/Wan2GP/Wan2GP/Wan2GP')
+
 import os
 import time
 import sys
