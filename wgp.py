@@ -67,7 +67,7 @@ lock = threading.Lock()
 current_task_id = None
 task_id = 0
 
-matanyone_app = MatAnyone()
+matanyone_app = MatAnyone(cfg={})
 
 # Existing line 69
 vmc_event_handler = matanyone_app.get_vmc_event_handler()
