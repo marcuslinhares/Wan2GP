@@ -66,7 +66,12 @@ if mmgp_version != target_mmgp_version:
 lock = threading.Lock()
 current_task_id = None
 task_id = 0
+
+matanyone_app = MatAnyone()
+
+# Existing line 69
 vmc_event_handler = matanyone_app.get_vmc_event_handler()
+
 unique_id = 0
 unique_id_lock = threading.Lock()
 offloadobj = None
