@@ -6,6 +6,9 @@ import time
 import sys
 import threading
 import argparse
+
+import types
+
 from mmgp import offload, safetensors2, profile_type 
 try:
     import triton
@@ -67,7 +70,8 @@ lock = threading.Lock()
 current_task_id = None
 task_id = 0
 
-matanyone_app = MatAnyone(cfg={})
+matanyone_config = types.SimpleNamespace(model=types.SimpleNamespace())
+matanyone_app = MatAnyone(cfg=matanyone_config)
 
 # Existing line 69
 vmc_event_handler = matanyone_app.get_vmc_event_handler()
