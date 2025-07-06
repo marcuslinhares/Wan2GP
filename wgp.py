@@ -36,9 +36,12 @@ import atexit
 import shutil
 import glob
 import cv2
+
 from transformers.utils import logging
-logging.set_verbosity_error
-from preprocessing.matanyone  import app as matanyone_app
+logging.set_verbosity_error()
+
+from preprocessing.matanyone.matanyone.model.matanyone import MatAnyone
+
 from tqdm import tqdm
 import requests
 
